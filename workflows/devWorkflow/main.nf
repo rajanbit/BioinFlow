@@ -1,23 +1,23 @@
 nextflow.enable.dsl=2
 
 // Run FASTQC
-include { FASTQC		} from "../modules/fastqc/main"
+include { FASTQC		} from "../../modules/fastqc/main"
 
 // Run FASTP
-include { FASTP			} from "../modules/fastp/main"
+include { FASTP			} from "../../modules/fastp/main"
 
 // Run BWAMEM2_INDEX
-include { BWAMEM2_INDEX		} from "../modules/bwamem2/index/main"
+include { BWAMEM2_INDEX		} from "../../modules/bwamem2/index/main"
 
 // Run BWAMEM2_MEM
-include { BWAMEM2_MEM		} from "../modules/bwamem2/mem/main"
+include { BWAMEM2_MEM		} from "../../modules/bwamem2/mem/main"
 
 // Run MULTIQC
-include { MULTIQC		} from "../modules/multiqc/main"
+include { MULTIQC		} from "../../modules/multiqc/main"
 
 
 
-workflow WES {
+workflow devWorkflow {
 
 	// Channel for FASTQ read
 	fastq_reads = channel.fromPath(params.sample_sheet) \
