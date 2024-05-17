@@ -1,0 +1,5 @@
+{
+"sample_sheet":"/path/to/sample.csv",
+"outdir":"results",	
+"fasta":"/path/to/reference.fasta"  
+}
